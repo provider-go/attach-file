@@ -3,5 +3,7 @@
 ## 插件接口
 
 ```
-POST /file/list -> github.com/provider-go/attach-file/api.ListFile
+GET /file/download -> github.com/provider-go/attach-file/api.Download
+POST /file/upload -> github.com/provider-go/attach-file/api.Upload
+POST /file/list -> github.com/provider-go/attach-file/api.ListAttachFile
 ```
