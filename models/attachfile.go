@@ -6,7 +6,7 @@ import (
 )
 
 type AttachFile struct {
-	Hash       string    `json:"hash" gorm:"column:hash;type:varchar(40);primary_key;comment:'主键'"`
+	Hash       string    `json:"hash" gorm:"column:hash;type:varchar(50);primary_key;comment:'主键'"`
 	FilePath   string    `json:"filePath" gorm:"column:file_path;type:varchar(200);not null;default:'';comment:文件保存路径"`
 	FileName   string    `json:"fileName" gorm:"column:file_name;type:varchar(200);not null;default:'';comment:原始文件名称"`
 	FileSize   int64     `json:"fileSize" gorm:"column:file_size;not null;default:0;comment:文件大小"`
