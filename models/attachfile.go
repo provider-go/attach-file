@@ -25,7 +25,7 @@ func ListAttachFile(pageSize, pageNum int) ([]*AttachFile, int64, error) {
 	var count int64
 	global.DB.Table("attach_files").Count(&count)
 
-	if err := global.DB.Table("attach_files").Order("CreateTime desc").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&rows).Error; err != nil {
+	if err := global.DB.Table("attach_files").Order("create_time desc").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&rows).Error; err != nil {
 		return nil, 0, err
 	}
 	return rows, count, nil
