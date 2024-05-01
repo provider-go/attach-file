@@ -15,7 +15,7 @@ type AttachFile struct {
 }
 
 func CreateAttachFile(hash, filePath, fileName string, fileSize int64) error {
-	return global.DB.Table("attach_files").Select("hash", "filePath", "fileType", "fileSize").
+	return global.DB.Debug().Table("attach_files").Select("hash", "filePath", "fileType", "fileSize").
 		Create(&AttachFile{Hash: hash, FilePath: filePath, FileName: fileName, FileSize: fileSize}).Error
 }
 
