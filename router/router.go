@@ -17,7 +17,7 @@ func (s *Router) InitRouter(Router *gin.RouterGroup) {
 	{
 		// attach file 表操作
 		Router.POST("upload", api.Upload)
-		Router.POST("download", api.Download)
+		Router.GET("download", api.Download)
 		Router.POST("list", api.ListAttachFile)
 	}
 }
