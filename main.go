@@ -15,6 +15,7 @@ func CreatePlugin() *Plugin {
 
 func CreatePluginAndDB(instance types.PluginNeedInstance) *Plugin {
 	global.DB = instance.Mysql
+	global.SMCC = instance.SMCC
 	return &Plugin{}
 }
 
