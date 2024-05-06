@@ -14,7 +14,7 @@ var (
 	SMCC       smcc.SMCC
 )
 
-func init() {
+func InstanceStorageFile() {
 	// 地址改成从配置中心读取
 	addr, err := SMCC.GetConfig("ipfs.addr")
 	if err != nil {
